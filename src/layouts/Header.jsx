@@ -1,6 +1,8 @@
+console.log('Header.jsx file');
+
 export default function Header() {
 
-    // console.log('Header Component Rendered')
+    console.log('Header Component Rendered')
     
     
     return (

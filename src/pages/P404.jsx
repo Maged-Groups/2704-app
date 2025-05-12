@@ -1,5 +1,7 @@
+console.log('P404.jsx file');
 
 function P404() {
+      console.log('P404 Component rendered');
 
     return (
         <div className="flex flex-col items-center justify-center  bg-gray-50 p-4">
