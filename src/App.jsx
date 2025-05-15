@@ -25,24 +25,29 @@ console.log('App.jsx file');
 export default function App() {
     console.log('App Component rendered');
 
+    const x = 233;
     return (
 
-        <div className="h-screen">
+        <div className="min-h-screen flex flex-col justify-between">
 
-            <Header />
-            <TopNavbar />
+            <div>
+                {/* <Header /> */}
 
-            <Suspense fallback={<LoadingFullScreen />} >
-                <Routes>
-                    <Route path='/' element={<Home />} />
-                    <Route path='/users' element={<Suspense fallback={<LoadingFullScreen />}><Users /></Suspense>} />
-                    <Route path='/marketplace' element={<Suspense fallback={<LoadingFullScreen />}><Products /></Suspense>} />
-                    <Route path='/marketplace/:id' element={<SingleProduct />} />
-                    <Route path='/marketplace/:id/edit' element={<EditProduct />} />
-                    <Route path='/contacts' element={<Contact />} />
-                    <Route path='*' element={<P404 />} />
-                </Routes>
-            </Suspense>
+                <TopNavbar />
+
+                <Suspense fallback={<LoadingFullScreen />} >
+                    <Routes>
+                        <Route path='/' element={<Home />} />
+                        <Route path='/users' element={<Suspense fallback={<LoadingFullScreen />}><Users /></Suspense>} />
+                        <Route path='/marketplace' element={<Suspense fallback={<LoadingFullScreen />}><Products /></Suspense>} />
+                        <Route path='/marketplace/:id' element={<SingleProduct />} />
+                        <Route path='/marketplace/:id/edit' element={<EditProduct />} />
+                        <Route path='/contacts' element={<Contact />} />
+                        <Route path='*' element={<P404 />} />
+                    </Routes>
+                </Suspense>
+            </div>
+
 
 
             <Footer />

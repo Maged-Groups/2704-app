@@ -3,17 +3,16 @@ import { Link } from 'react-router';
 
 const ProductCard = ({ product }) => {
     const [isHovered, setIsHovered] = useState(false);
-    const [quantity, setQuantity] = useState(0);
 
+    console.log('ProductCard rendered')
     // Handle add to cart
     const handleAddToCart = () => {
-        console.log(`Added ${quantity} ${product.title} to cart`);
         // You can integrate with Redux, Context, or any state management here
     };
 
     // Handle increment/decrement
-    const handleIncrement = () => setQuantity(prev => prev + 1);
-    const handleDecrement = () => setQuantity(prev => (prev > 0 ? prev - 1 : 0));
+    const handleIncrement = () => { };
+    const handleDecrement = () => { };
 
     return (
         <div
@@ -73,7 +72,7 @@ const ProductCard = ({ product }) => {
                         >
                             -
                         </button>
-                        <span className="px-3 py-1">{quantity}</span>
+                        <span className="px-3 py-1">{0}</span>
                         <button
                             onClick={handleIncrement}
                             className="px-3 py-1 bg-gray-100 hover:bg-gray-200 transition-colors"
@@ -92,7 +91,7 @@ const ProductCard = ({ product }) => {
 
             </div>
 
-            
+
         </div>
     );
 };

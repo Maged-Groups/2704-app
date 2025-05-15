@@ -6,7 +6,7 @@ export default function Header() {
     
     
     return (
-        <header className="flex items-center justify-center bg-sky-900 text-white h-2/12">
+        <header className="flex items-center justify-center bg-sky-900 text-white h-screen">
             <h1 className='font-bold text-4xl uppercase'>App Header</h1>
         </header>
     )

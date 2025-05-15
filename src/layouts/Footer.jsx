@@ -6,7 +6,7 @@ export default function Footer() {
 
     return (
         <footer className="flex items-center justify-between bg-gray-900 text-white p-2 w-full">
-            <div className='font-bold text-md uppercase'>
+            <div className='font-bold text-md uppercase '>
                 App footer
             </div>
         </footer>

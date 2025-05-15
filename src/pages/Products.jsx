@@ -12,7 +12,7 @@ const { products } = data;
 
 console.log('products', products);
 
-export default function Products() {
+export default function Products( ) {
 
   console.log('Products Component rendered');
 
@@ -21,7 +21,7 @@ export default function Products() {
       <h1 className="text-3xl font-bold text-center mb-8">Shop Products</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {products.map((product) => (
-          <ProductCard key={product.id} product={product} />
+          <ProductCard   key={product.id} product={product} />
         ))}
       </div>
     </div>
