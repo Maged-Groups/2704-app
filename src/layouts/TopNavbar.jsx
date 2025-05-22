@@ -14,9 +14,17 @@ const TopNavbar = () => {
 
 
 
-  const { user, token, isLoggedin } = useSelector(store => { return store.userReducer });
+  const { user, token, isLoggedin } = useSelector(store => store.userReducer);
+  const { cartItems } = useSelector(store => store.cartReducer);
 
 
+  // const cartItemsCount = cartItems.length;
+
+
+  const cartItemsCount = cartItems.reduce((init, item) => init + item.quantity, 0)
+
+
+  console.log('Nav bar: cartItems', cartItems)
 
 
   return (
@@ -26,10 +34,10 @@ const TopNavbar = () => {
 
         {/* ICONS */}
         <div>
-          <div className='relative'>
+          <Link to='/cart' className='relative'>
             <MdOutlineShoppingCart className='text-2xl' />
-            <div className='absolute -top-1 -right-3 w-5 h-5 rounded-full bg-sky-900 text-white flex items-center justify-center text-xs'>{0}</div>
-          </div>
+            <div className='absolute -top-1 -right-3 w-5 h-5 rounded-full bg-sky-900 text-white flex items-center justify-center text-xs'>{cartItemsCount}</div>
+          </Link>
         </div>
 
         {/* Acccount */}

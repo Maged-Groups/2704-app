@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router';
+import AddToCart from './AddToCart'
 
 const ProductCard = ({ product }) => {
     const [isHovered, setIsHovered] = useState(false);
@@ -10,9 +11,6 @@ const ProductCard = ({ product }) => {
         // You can integrate with Redux, Context, or any state management here
     };
 
-    // Handle increment/decrement
-    const handleIncrement = () => { };
-    const handleDecrement = () => { };
 
     return (
         <div
@@ -64,23 +62,7 @@ const ProductCard = ({ product }) => {
                 </div>
 
                 {/* Add to Cart Component */}
-                <div className="mt-4 flex items-center justify-between">
-                    <div className="flex items-center border rounded-full overflow-hidden">
-                        <button
-                            onClick={handleDecrement}
-                            className="px-3 py-1 bg-gray-100 hover:bg-gray-200 transition-colors"
-                        >
-                            -
-                        </button>
-                        <span className="px-3 py-1">{0}</span>
-                        <button
-                            onClick={handleIncrement}
-                            className="px-3 py-1 bg-gray-100 hover:bg-gray-200 transition-colors"
-                        >
-                            +
-                        </button>
-                    </div>
-                </div>
+                <AddToCart product={product} />
 
                 <Link
                     to={`/marketplace/${product.id}`}

@@ -10,7 +10,7 @@ const userReducer = createSlice({
             photo: 'https://avatars.githubusercontent.com/u/141430890?s=40&v=4',
         },
         token: null,
-        isLoggedin: true
+        isLoggedin: false
     },
     reducers: {
         rdxLoggedin: () => { console.log('setUserName function fired') }

@@ -13,6 +13,7 @@ import Contact from './pages/Contact';
 import SingleProduct from './pages/SingleProduct';
 import EditProduct from './pages/EditProduct';
 import LoadingFullScreen from './components/LoadingFullScreen';
+import Cart from './pages/Cart';
 
 // Lazy imports
 
@@ -43,6 +44,7 @@ export default function App() {
                         <Route path='/marketplace/:id' element={<SingleProduct />} />
                         <Route path='/marketplace/:id/edit' element={<EditProduct />} />
                         <Route path='/contacts' element={<Contact />} />
+                        <Route path='/cart' element={<Cart />} />
                         <Route path='*' element={<P404 />} />
                     </Routes>
                 </Suspense>
